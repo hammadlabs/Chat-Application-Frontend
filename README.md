@@ -1,3 +1,3 @@
 ## Chat Application Frontend
 
--Vite -react -typescript
+- Vite - react - typescript
