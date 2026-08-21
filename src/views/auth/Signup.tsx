@@ -4,7 +4,7 @@ export default function Signup() {
       <div>
         <div className="Title"></div>
         <div className="Form">
-          <form>
+          <form method="post">
             <div className="firstName">
               <input type="text" name="fName" placeholder="First Name" />
               <input type="text" name="lName" placeholder="Last Name" />
@@ -13,7 +13,7 @@ export default function Signup() {
               <input name="userName" type="email" placeholder="Email" />
             </div>
             <div className="password">
-              <input name="password" type="email" placeholder="Email" />
+              <input name="password" type="password" placeholder="Password" />
             </div>
             <div>
               <button type="submit">Register</button>

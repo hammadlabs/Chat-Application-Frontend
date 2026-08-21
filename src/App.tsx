@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
 import AuthLayouts from "./layouts/AuthLayouts";
 
 export default function App() {
@@ -9,26 +7,15 @@ export default function App() {
   const setAuthUser = () => {
     setAuthenticated(true);
   };
+  setAuthUser();
   let routes;
   if (!authenticated) {
     routes = (
       <Routes>
         <Route path="/auth/*" element={<AuthLayouts />} />
-        <Route path="/*" element={<Navigate to="/auth/login" />} />
+        <Route path="*" element={<Navigate to="/auth/login" replace />} />
       </Routes>
     );
-  } else {
-    routes = (
-      <Routes>
-        <Route path="/home" element={<Footer />} />
-      </Routes>
-    );
-  }
-  return (
-    <>
-      <Header />
-      {routes}
-      <Footer />
-    </>
-  );
+  } else return null;
+  return <>{routes}</>;
 }

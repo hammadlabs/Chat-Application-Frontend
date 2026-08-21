@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand color palette -> generates bg-brand-primary, text-brand-accent, etc. */
+  --color-brand-primary: #1e40af;
+  --color-brand-secondary: #3e9db7;
+  --color-brand-accent: #f59e0b;
+
+  /* Custom Font Family -> generates font-sans, font-display */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Oswald", sans-serif;
+}
+
+/* 1. Global Page Background and Default Typography */
+@utility body-defaults {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased;
+}
+
+body {
+  @apply body-defaults;
+}
+
+/* 2. Reusable Button Components */
+@utility btn-primary {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg 
+         bg-brand-primary text-white font-medium 
+         hover:bg-brand-secondary transition-colors duration-200;
+}
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg 
+         bg-brand-secondary text-white font-medium 
+         hover:bg-brand-accent transition-colors duration-200;
+}

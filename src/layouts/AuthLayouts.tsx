@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import AuthRoutes from "../routes/AuthRoutes";
 import type { RouteTypes } from "../types/routes";
 
@@ -11,5 +11,10 @@ export default function AuthLayouts() {
     });
   };
   console.log(AuthRoutes);
-  return <Routes>{getRoutes(AuthRoutes as RouteTypes[])}</Routes>;
+  return (
+    <Routes>
+      {getRoutes(AuthRoutes as RouteTypes[])};
+      <Route path="*" element={<Navigate to="/auth/login" replace />} />
+    </Routes>
+  );
 }
