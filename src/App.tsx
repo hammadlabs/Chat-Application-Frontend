@@ -7,7 +7,7 @@ export default function App() {
   const setAuthUser = () => {
     setAuthenticated(true);
   };
-  setAuthUser();
+
   let routes;
   if (!authenticated) {
     routes = (
