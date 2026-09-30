@@ -59,7 +59,7 @@ export default function Login() {
             </div>
           </div>
           <div className="flex-1">
-            <div className="m-5  rounded ">2</div>
+            <div className="m-[10px] rounded-[10px] h-[stretch] bg-secondary"></div>
           </div>
         </div>
       </div>
