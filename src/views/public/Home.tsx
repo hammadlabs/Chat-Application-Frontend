@@ -1,5 +1,3 @@
-
-import {Navigate} from "react-router"
 const CHAT_URL = "auth/login"; // Replace with your chat URL
 
 const features = [
@@ -42,20 +40,7 @@ const features = [
   },
 ];
 
-const benefits = [
-  {
-    title: "Less friction",
-    text: "Start conversations without fighting a complicated interface.",
-  },
-  {
-    title: "Closer connections",
-    text: "Make one-to-one chats and group conversations part of your everyday life.",
-  },
-  {
-    title: "Built for everyday use",
-    text: "A straightforward experience that puts your conversations first.",
-  },
-];
+
 
 function ArrowIcon({ diagonal = false }: { diagonal?: boolean }) {
   return diagonal ? (
@@ -378,23 +363,6 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-6">
-                {benefits.map((benefit, index) => (
-                  <div key={benefit.title} className="flex gap-4">
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-secondary/30 text-background">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
-                        <path d="m5 12 4 4L19 6" />
-                      </svg>
-                    </span>
-                    <div>
-                      <h3 className="font-semibold">{benefit.title}</h3>
-                      <p className="mt-1 text-sm leading-6 text-white/65">
-                        {benefit.text}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
 
               <div className="mt-9 h-1.5 overflow-hidden rounded-full bg-white/10">
                 <div className="h-full w-2/3 rounded-full bg-background" />
