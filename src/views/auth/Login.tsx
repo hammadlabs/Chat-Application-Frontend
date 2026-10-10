@@ -4,7 +4,7 @@ export default function Login() {
       <div className="h-screen bg-background relative">
         <div className="absolute flex  bg-surface top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[80%] rounded-[16px]">
           <div className="flex-1 ">
-            <div className="m-10 formContainer ">
+            <div className="m-10 formContainer h-[-webkit-fill-available] bg-gray-100 rounded-[10px]">
               <div>
                 <h1 className="text-2xl font-bold text-primary ">Welcome</h1>
               </div>
@@ -34,7 +34,7 @@ export default function Login() {
                         />
                       </div>
                       <div className="flex justify-end">
-                        <a href="#" className="text-sm text-accent hover:underline">
+                        <a href="/auth/reset-password" className="text-sm text-accent hover:underline">
                           Forgot Password?
                         </a>
                       </div>
