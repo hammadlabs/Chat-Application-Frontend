@@ -5,27 +5,23 @@ import NotFound from "./views/public/NotFound";
 import Home from "./views/public/Home";
 
 export default function App() {
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
   const toggleAuth = () => {
     setAuthenticated((prev) => !prev); // ← flips true ↔ false
   };
-  toggleAuth();
+
   let routes;
   if (!authenticated) {
     routes = (
-      <>
-
-            <button onClick={toggleAuth}>
-        {authenticated ? "Log out" : "Log in"}
-      </button>
-
-      <Routes>
+    <Routes>
         <Route path="/auth/*" element={<AuthLayouts />} />       
       </Routes>
-      </>
     );
   } else return null;
   return (<>
+        <button onClick={toggleAuth}>
+        {authenticated ? "Log out" : "Log in"}
+      </button>
   {routes}
   <Routes>
     <Route path="*" element={<NotFound />} />
